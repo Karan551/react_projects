@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 export default function Navbar(props) {
     return (
@@ -28,7 +29,16 @@ export default function Navbar(props) {
         </>
     )
 }
-
+// This is a PropTypes checking
+Navbar.propTypes={
+    title:PropTypes.string.isRequired,
+    about:PropTypes.string.isRequired
+}
+//  Default prop types
+Navbar.defaultProps={
+    title:'Title Here',
+    about:'About Here'
+}
 
 
 
