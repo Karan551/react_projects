@@ -81,15 +81,15 @@ export default function TextForm({ heading, mode, showAlert }) {
 
             <h3 className={`text-${mode === "dark" ? "light" : "dark"}`}>{heading}</h3>
             <div className="mb-3">
-                <textarea className={`form-control fs-5`} id="textArea" rows="10" value={text} onChange={changeValue} placeholder='Enter Text Here:' spellCheck='true' style={{ backgroundColor: mode === 'dark' ? '#042743' : 'white', color: mode === 'dark' ? '#fff' : '#333' }}></textarea>
+                <textarea className={`form-control fs-5`} id="textArea" rows="10" value={text} onChange={changeValue} placeholder='Enter Text Here:' spellCheck='true' style={{ backgroundColor: mode === 'dark' ? '#042743' : 'white', color: mode === 'dark' ? '#fff' : '#333' }} title='Enter something here:'></textarea>
             </div>
             {/* buttons for change font */}
-            <button className='btn btn-outline-primary' onClick={upperBtn}>Convert To Uppercase.</button>
-            <button className='btn btn-outline-secondary mx-2' onClick={lowerBtn}>Convert To lowercase.</button>
-            <button className={`btn btn-outline-${mode === 'dark' ? "light" : "dark"} mx-2`} onClick={clearBtn}>Clear The Input Field.</button>
+            <button className='btn btn-outline-primary' onClick={upperBtn}title='Convert To Uppercase'>Convert To Uppercase.</button>
+            <button className='btn btn-outline-secondary mx-2' onClick={lowerBtn} title='Convert To lower case'>Convert To lowercase.</button>
+            <button className={`btn btn-outline-${mode === 'dark' ? "light" : "dark"} mx-2`} onClick={clearBtn} title='Clear input field.'>Clear The Input Field.</button>
             {/*  */}
-            <button className='btn btn-outline-success mx-2' onClick={copyText} id='copy-text'>Copy Text.</button>
-            <button className={`btn btn-outline-${mode === 'dark' ? "light" : "dark"} mx-2`} onClick={removeExtraSpace}>Remove Extra Spaces.</button>
+            <button className='btn btn-outline-success mx-2' onClick={copyText} id='copy-text' title='Copy text into clipboard.'>Copy Text.</button>
+            <button className={`btn btn-outline-${mode === 'dark' ? "light" : "dark"} mx-2`} onClick={removeExtraSpace} title='Remove extra spaces.'>Remove Extra Spaces.</button>
 
             {/*  */}
             <div className={`container my-3 text-${mode === "dark" ? "light" : "dark"}`}>

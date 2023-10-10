@@ -28,11 +28,13 @@ function App() {
       // document.body.style.backgroundColor='#808080'
       document.body.style.backgroundColor = '#042743'
       showAlert("Dark Mode has been enabled.", "dark")
+      // change title on runtime
+      document.title="Text Utils - Dark Mode"
     } else {
       setMode('light')
       document.body.style.backgroundColor = 'white'
       showAlert("Light Mode has been enabled.", "light")
-      // showAlert()
+      document.title="Text Utils - Light Mode"
     }
   }
 
